@@ -1,7 +1,29 @@
-# Vue 3 + Vite
+# Gwen-Admin
+# 基于 Vue3 + Element Plus 的后台管理系统
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+<a href="https://github.com/vuejs/vue-next">
+    <img src="https://img.shields.io/badge/vue-^3.2.16-brightgreen.svg" alt="vue3">
+  </a>
+  <a href="https://github.com/element-plus/element-plus">
+    <img src="https://img.shields.io/badge/element--plus-^1.2.0--beta.1-brightgreen.svg" alt="element-plus">
+  </a>
+  <a href="https://github.com/lejianwen/Gwen-admin/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/mashape/apistatus.svg" alt="license">
+  </a>
 
-## Recommended IDE Setup
+# 安装步骤
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+~~~shell script
+git clone https://github.com/lejianwen/Gwen-admin.git  
+cd Gwen-admin   
+npm install
+
+// 本地开发
+npm run dev
+
+// 打包
+npm run build
+
+// 本地预览
+npm run server
+~~~
