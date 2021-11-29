@@ -1,0 +1,53 @@
+{
+  "code": 0,
+  "message": "success",
+  "data": {
+    "list": [
+      {
+        "id": 1,
+        "created_at": "2017-03-23 01:14:31",
+        "updated_at": "2021-11-25 09:50:00",
+        "nickname": "11111234565",
+        "status": 1
+      },
+      {
+        "id": 2,
+        "created_at": "2017-03-23 01:14:31",
+        "updated_at": "2021-11-25 09:50:00",
+        "nickname": "222222",
+        "status": 1
+      },
+      {
+        "id": 3,
+        "created_at": "2017-03-23 01:14:31",
+        "updated_at": "2021-11-25 09:50:00",
+        "nickname": "222222",
+        "status": 1
+      },
+      {
+        "id": 4,
+        "created_at": "2017-03-23 01:14:31",
+        "updated_at": "2021-11-25 09:50:00",
+        "nickname": "222222",
+        "status": 1
+      },
+      {
+        "id": 5,
+        "created_at": "2017-03-23 01:14:31",
+        "updated_at": "2021-11-25 09:50:00",
+        "nickname": "222222",
+        "status": 1
+      },
+      {
+        "id": 6,
+        "created_at": "2017-03-23 01:14:31",
+        "updated_at": "2021-11-25 09:50:00",
+        "nickname": "222222",
+        "status": 1
+      }
+    ],
+    "page": 0,
+    "total": 96,
+    "page_size": 0
+  }
+}

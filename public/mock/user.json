@@ -1,0 +1,15 @@
+{
+  "code": 0,
+  "data": {
+    "nickname": "Gwen",
+    "role": "Admin",
+    "token": "1234",
+    "avatar": "/favicon.ico",
+    "route_names": [
+      "Home",
+      "AdminList",
+      "AdminAdd",
+      "AdminEdit"
+    ]
+  }
+}
