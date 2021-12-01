@@ -1,20 +1,16 @@
 <template>
-  <div>
-    <router-view/>
-  </div>
-
+  <router-view/>
 </template>
 <script>
   import { defineComponent, ref, onMounted } from 'vue'
 
   export default defineComponent({
-    props:{
-    },
+    props: {},
     setup (props) {
     },
-    created(){
+    created () {
 
-    }
+    },
   })
 
 

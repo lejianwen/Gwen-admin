@@ -1,8 +1,5 @@
 <template>
   <el-container>
-    <!--    <el-header class="header-tags">-->
-    <!--      <Tags></Tags>-->
-    <!--    </el-header>-->
     <el-aside :width="leftWidth" class="app-left">
       <g-aside></g-aside>
     </el-aside>

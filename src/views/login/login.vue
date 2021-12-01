@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <el-card style="width: 500px;margin: 0 auto;margin-top: 200px">
+  <div class="login">
+    <el-card class="login-card">
       <h1>登录</h1>
       <el-form label-width="60px">
         <el-form-item label="用户名">
@@ -50,10 +50,40 @@
   })
 </script>
 
-<style scoped>
-  .tips {
-    font-size: 12px;
-    color: #666;
-    margin-left: 60px;
+<style scoped lang="scss">
+  .login {
+    width: 100vw;
+    height: 100vh;
+    background-color: #2d3a4b;
+    padding-top: 200px;
+    box-sizing: border-box;
+    .tips {
+      font-size: 12px;
+      color: #fff;
+      margin-left: 60px;
+    }
+
+    .login-card {
+      width: 500px;
+      background-color: #283342;
+      color: #fff;
+      border: none;
+      margin: 0 auto;
+      .el-form-item {
+
+        ::v-deep(.el-form-item__label) {
+          color: #fff;
+        }
+
+        .el-input {
+
+          ::v-deep(.el-input__inner) {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: transparent;
+            color: #fff;
+          }
+        }
+      }
+    }
   }
 </style>
