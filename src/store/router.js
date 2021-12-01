@@ -30,8 +30,11 @@ export const useRouteStore = defineStore({
   }),
   actions: {
     addRoutes (accessRouteNames) {
-      this.routes = filterRoute(asyncRoutes, accessRouteNames).concat(lastRoutes)
+      this.routes = filterRoute(asyncRoutes, accessRouteNames)
       this.routes.forEach(route => {
+        router.addRoute(route)
+      })
+      lastRoutes.forEach(route => {
         router.addRoute(route)
       })
       this.addKeepAlive(this.routes)
