@@ -184,12 +184,14 @@
 
 <style scoped lang="scss">
   .upload-order-file {
-    :deep(.el-upload-list__item) {
+    ::v-deep(.el-upload-list__item) {
       transition: none !important;
     }
-    :deep(.el-upload-list){
+
+    ::v-deep(.el-upload-list) {
       transition: none !important;
     }
+
     .el-upload-list__item-thumbnail {
       object-fit: contain;
     }

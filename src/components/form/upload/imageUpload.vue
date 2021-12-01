@@ -144,7 +144,7 @@
 <style scoped lang="scss">
   .upload-order-file {
 
-    :deep(.el-upload-list__item-thumbnail) {
+    ::v-deep(.el-upload-list__item-thumbnail) {
       object-fit: contain;
     }
 
@@ -164,7 +164,7 @@
   .preview-image {
     width: 100%;
 
-    :deep(img) {
+    ::v-deep(img) {
       max-height: 700px;
     }
   }
