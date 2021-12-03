@@ -37,7 +37,7 @@ export function useRepositories () {
 
   watch(() => listQuery.page, getList)
 
-  watch(() => listQuery.page_size, () => listQuery.page = 1)
+  watch(() => listQuery.page_size, () => listQuery.page > 1 ? (listQuery.page = 1) : getList())
   return {
     listRes,
     listQuery,
