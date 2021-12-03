@@ -1,4 +1,8 @@
 <template>
+  <el-icon class="ex-icon" @click="expandOrFoldSlider">
+    <el-icon-expand v-if="setting.sideIsCollapse"></el-icon-expand>
+    <el-icon-fold v-else></el-icon-fold>
+  </el-icon>
   <div class="header-logo">
     <img :src="setting.logo" alt="" class="logo">
     <div class="title">{{setting.title}}</div>
@@ -22,8 +26,12 @@
     setup (props) {
       const appStore = useAppStore()
       const setting = computed(() => appStore.setting)
+      const expandOrFoldSlider = () => {
+        appStore.sideCollapse()
+      }
       return {
         setting,
+        expandOrFoldSlider,
       }
     },
 
@@ -31,6 +39,14 @@
 </script>
 
 <style scoped lang="scss">
+  .ex-icon {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
 
   .header-logo {
     display: flex;
