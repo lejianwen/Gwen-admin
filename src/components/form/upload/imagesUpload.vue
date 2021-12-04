@@ -16,13 +16,17 @@
             list-type="picture-card"
             :limit="limit"
             accept="image/*"
+            :drag="drag"
     >
       <template #default>
         <div class="default-slot">
           <slot name="default">
-            <el-icon class="default-icon">
-              <plus/>
-            </el-icon>
+            <div>
+              <el-icon class="default-icon">
+                <plus/>
+              </el-icon>
+              <div class="drag-tips">点击上传<span v-if="drag">或直接拖入文件</span></div>
+            </div>
           </slot>
         </div>
       </template>
@@ -62,6 +66,10 @@
   export default defineComponent({
     name: 'imagesUpload',
     props: {
+      drag: {
+        type: Boolean,
+        default: false,
+      },
       limit: {
         type: Number,
         default: 0,
@@ -184,6 +192,18 @@
 
 <style scoped lang="scss">
   .upload-order-file {
+    ::v-deep(.el-upload-dragger) {
+      border: none;
+      width: 100%;
+      height: 100%;
+    }
+
+    .drag-tips {
+      font-size: 12px;
+      color: #999;
+    }
+
+
     ::v-deep(.el-upload-list__item) {
       transition: none !important;
     }

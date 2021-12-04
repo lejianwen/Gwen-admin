@@ -27,3 +27,15 @@ npm run build
 // 本地预览
 npm run server
 ~~~
+
+## 功能
+
+-   [x] Element Plus
+-   [x] 登录/注销
+-   [x] 路由权限
+-   [x] Dashboard
+-   [x] 表格
+-   [x] 表单
+-   [x] 图片本地/oss上传
+-   [x] 404
+-   [x] 多级菜单
