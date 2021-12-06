@@ -38,7 +38,7 @@
         const res = await userStore.login(form)
         if (res) {
           ElMessage.success('登录成功')
-          router.push(redirect || '/')
+          router.push({ path: redirect || '/', replace: true })
         }
       }
       return {
