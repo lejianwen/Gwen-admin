@@ -32,6 +32,7 @@
       </template>
       <template #file="{file}">
         <img
+                v-if="file.status === 'success'"
                 class="el-upload-list__item-thumbnail"
                 :src="file.url"
                 alt=""
@@ -98,7 +99,10 @@
         type: Boolean,
         default: false,
       },
-
+      width: {
+        type: String,
+        default: '148px',
+      },
     },
     components: { Plus, ZoomIn, Delete, ArrowLeft, ArrowRight, Check },
     setup (props, context) {
@@ -196,6 +200,26 @@
       border: none;
       width: 100%;
       height: 100%;
+    }
+
+    ::v-deep(.el-upload--picture-card) {
+      width: v-bind(width);
+      height: v-bind(width);
+    }
+
+    ::v-deep(.el-upload-list__item) {
+      width: v-bind(width);
+      height: v-bind(width);
+    }
+
+    ::v-deep(.el-progress) {
+      width: v-bind(width) !important;
+      height: v-bind(width) !important;
+    }
+
+    ::v-deep(.el-progress-circle) {
+      width: v-bind(width) !important;
+      height: v-bind(width) !important;
     }
 
     .drag-tips {

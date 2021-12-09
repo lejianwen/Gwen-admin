@@ -1,6 +1,7 @@
 <template>
   <div class="upload-order-file">
     <el-upload
+            size="mini"
             ref="upload"
             :on-success="fileUploadSuccess"
             :before-upload="beforeFileUpload"
@@ -62,6 +63,10 @@
       type: {
         type: String,
         default: 'local', //local oss
+      },
+      width: {
+        type: String,
+        default: '148px',
       },
     },
     components: { Plus, ZoomIn, Delete, ArrowLeft, ArrowRight, Check },
@@ -146,7 +151,29 @@
 
     ::v-deep(.el-upload-list__item-thumbnail) {
       object-fit: contain;
+
     }
+
+    ::v-deep(.el-upload--picture-card) {
+      width: v-bind(width);
+      height: v-bind(width);
+    }
+
+    ::v-deep(.el-upload-list__item) {
+      width: v-bind(width);
+      height: v-bind(width);
+    }
+
+    ::v-deep(.el-progress) {
+      width: v-bind(width) !important;
+      height: v-bind(width) !important;
+    }
+
+    ::v-deep(.el-progress-circle) {
+      width: v-bind(width) !important;
+      height: v-bind(width) !important;
+    }
+
 
     .default-slot {
       height: 100%;
