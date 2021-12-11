@@ -3,7 +3,7 @@
     <el-dropdown class="menu-item">
       <div class="title">
         <el-image class="avatar" :src="user.avatar"></el-image>
-        <span>{{user.nickname}}</span>
+        <span class="nickname">{{user.nickname}}</span>
         <el-icon>
           <el-icon-arrow-down/>
         </el-icon>
@@ -53,7 +53,10 @@
       display: flex;
       align-items: center;
       justify-content: space-around;
-      width: 100px;
+
+      .nickname {
+        padding: 0 10px;
+      }
     }
   }
 </style>
