@@ -6,7 +6,7 @@ import { pinia } from '@/store'
 
 // create an axios instance
 const service = axios.create({
-  baseURL: import.meta.env.VITE_BASE_API, // url = base url + request url
+  baseURL: import.meta.env.VITE_SERVER_API,
   withCredentials: true, // send cookies when cross-domain requests
   timeout: 50000, // request timeout
 })

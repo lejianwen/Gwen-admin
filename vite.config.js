@@ -21,9 +21,9 @@ const conf = {
   root: './', // js导入的资源路径，src
   server: {
     open: true,
-    port: process.env.VITE_CLI_PORT,
+    port: process.env.VITE_DEV_PORT,
     proxy: {
-      [process.env.VITE_BASE_API]: {
+      [process.env.VITE_SERVER_API]: {
         target: process.env.VITE_SERVER_PATH,
         rewrite: path => path.replace(/^\/api/, '/mock'), //为了模拟
         changeOrigin: true,
