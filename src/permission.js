@@ -14,7 +14,7 @@ const routeStore = useRouteStore(pinia)
 const appStore = useAppStore(pinia)
 router.beforeEach(async (to, from, next) => {
 
-  document.title = (to.meta?.title || 'Gwen')+ '-' + appStore.setting.title
+  document.title = (to.meta?.title || 'Gwen') + '-' + appStore.setting.title
   NProgress.start()
 
   const token = getToken()
@@ -32,9 +32,14 @@ router.beforeEach(async (to, from, next) => {
     const userStore = useUserStore(pinia)
 
     if (!userStore.role) {
-      await userStore.info()
-      routeStore.addRoutes(userStore.route_names)
-      next({ ...to, replace: true })
+      const info = await userStore.info()
+      if (!info) {
+        userStore.logout()
+        next(`/login?redirect=${to.path}`)
+      } else {
+        routeStore.addRoutes(userStore.route_names)
+        next({ ...to, replace: true })
+      }
     } else {
       next()
     }
