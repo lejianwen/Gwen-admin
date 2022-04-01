@@ -32,21 +32,43 @@ const conf = {
   },
   build: {
     target: 'es2015',
-    minify: 'terser', // 是否进行压缩,boolean | 'terser' | 'esbuild',默认使用terser
+    minify: 'terser', // 是否进行压缩,boolean | 'terser' | 'esbuild',默认使用 esbuild
     manifest: false, // 是否产出maifest.json
     sourcemap: false, // 是否产出soucemap.json
+    emptyOutDir: true,
     outDir: 'dist', // 产出目录
+    rollupOptions: {
+      output: {
+        manualChunks (id) {
+          if (id.includes('node_modules')) {
+            const arr = id.toString().split('node_modules/')[1].split('/')
+            switch (arr[0]) {
+              case '@popperjs':
+              case '@vue':
+              case 'axios':
+              case 'element-plus':
+              case '@element-plus':
+                return '_' + arr[0]
+                break
+              default :
+                return '__vendor'
+                break
+            }
+          }else if(id.includes('Gwen-admin/src')){
+            //src 下的都打包到一起 不然很多小文件
+            return 'gwen'
+          }
+        },
+        chunkFileNames: 'static/chunk/[name]-[hash].js',
+        entryFileNames: 'static/entry/[name]-[hash].js',
+        assetFileNames: 'static/[ext]/[name]-[hash].[ext]'
+      },
+    },
   },
   css: {
     preprocessorOptions: {
-      less: {
-        // 支持内联 JavaScript
+      scss: {
         javascriptEnabled: true,
-      },
-      preprocessorOptions: {
-        scss: {
-          javascriptEnabled: true,
-        },
       },
     },
   },
