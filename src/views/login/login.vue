@@ -77,9 +77,12 @@
 
         .el-input {
 
-          ::v-deep(.el-input__inner) {
+          ::v-deep(.el-input__wrapper) {
             border: 1px solid rgba(255, 255, 255, 0.1);
             background: transparent;
+          }
+
+          ::v-deep(input) {
             color: #fff;
           }
         }
