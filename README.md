@@ -24,7 +24,7 @@ npm run dev
 // 打包
 npm run build
 
-// 本地预览
+// 本地预览,请先执行build
 npm run server
 ~~~
 

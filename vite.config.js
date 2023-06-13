@@ -21,7 +21,10 @@ const conf = {
   root: './', // js导入的资源路径，src
   server: {
     open: true,
-    port: process.env.VITE_DEV_PORT,
+    port: process.env.VITE_DEV_PORT
+  },
+  preview:{
+    port: process.env.VITE_PREVIEW_PORT,
     proxy: {
       [process.env.VITE_SERVER_API]: {
         target: process.env.VITE_SERVER_PATH,
