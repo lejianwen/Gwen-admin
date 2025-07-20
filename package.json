@@ -7,22 +7,22 @@
     "preview": "vite preview --config vite.config.js"
   },
   "dependencies": {
-    "axios": "^0.24.0",
-    "element-plus": "^2.3.6",
+    "axios": "1.8.2",
+    "element-plus": "^2.8.2",
     "js-cookie": "^3.0.1",
     "normalize.css": "^8.0.1",
     "nprogress": "^0.2.0",
-    "pinia": "^2.0.3",
-    "vue": "^3.2.37",
+    "pinia": "2.2.8",
+    "vue": "^3.5.13",
     "vue-router": "^4.0.12"
   },
   "devDependencies": {
     "@element-plus/icons": "0.0.11",
-    "@vitejs/plugin-vue": "^1.10.2",
+    "@vitejs/plugin-vue": "5.2.1",
     "dotenv": "^10.0.0",
     "qs": "^6.10.2",
     "sass-loader": "^12.3.0",
     "sass": "^1.43.4",
-    "vite": "^2.9.16"
+    "vite": "6.3.4"
   }
 }

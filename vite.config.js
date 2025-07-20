@@ -34,8 +34,8 @@ const conf = {
     },
   },
   build: {
-    target: 'es2015',
-    minify: 'terser', // 是否进行压缩,boolean | 'terser' | 'esbuild',默认使用 esbuild
+    target: 'es2020',
+    minify: 'esbuild', // 是否进行压缩,boolean | 'terser' | 'esbuild',默认使用 esbuild
     manifest: false, // 是否产出maifest.json
     sourcemap: false, // 是否产出soucemap.json
     emptyOutDir: true,
@@ -52,10 +52,8 @@ const conf = {
               case 'element-plus':
               case '@element-plus':
                 return '_' + arr[0]
-                break
               default :
                 return '__vendor'
-                break
             }
           }else if(id.includes('Gwen-admin/src')){
             //src 下的都打包到一起 不然很多小文件

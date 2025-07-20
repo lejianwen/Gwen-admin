@@ -8,13 +8,14 @@ import 'normalize.css/normalize.css'
 import { pinia } from '@/store'
 import '@/permission'
 import '@/styles/style.scss'
+import 'element-plus/theme-chalk/dark/css-vars.css'
 import * as ElementIcons from '@element-plus/icons'
 
 const app = createApp(App)
 app.use(ElementPlus, { locale: zhCn })
 app.use(pinia)
 app.use(router)
-for (let icon in ElementIcons){
-  app.component("ElIcon" +icon ,ElementIcons[icon])
+for (let icon in ElementIcons) {
+  app.component('ElIcon' + icon, ElementIcons[icon])
 }
 app.mount('#app')

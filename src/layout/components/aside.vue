@@ -13,8 +13,8 @@
   })
 </script>
 
-<style scoped>
-  .scroll-sidebar{
-    position: fixed;
-  }
+<style scoped lang="scss">
+.scroll-sidebar {
+  background-color: #2d3a4b;
+}
 </style>
