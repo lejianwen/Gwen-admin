@@ -5,7 +5,7 @@
           :closable="t.closeable"
           @close="close(t)"
           @click="toTag(t)"
-          :type="t.active?'':'info'"
+          :type="t.active?'primary':'info'"
           :effect="t.active?'dark':'plain'">
     {{t.title}}
   </el-tag>
