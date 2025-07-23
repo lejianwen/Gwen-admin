@@ -27,7 +27,7 @@
         </div>
       </template>
     </el-upload>
-    <el-dialog v-model="showPreview" top="5vh">
+    <el-dialog v-model="showPreview" top="5vh" append-to-body>
       <el-image :src="showImage" class="preview-image" fit="contain"></el-image>
     </el-dialog>
   </div>
@@ -54,7 +54,7 @@
       },
       host: {
         type: String,
-        default: import.meta.env.VITE_BASE_API + '/file/upload',
+        default: import.meta.env.VITE_SERVER_API + '/file/upload',
       },
       modelValue: {
         type: String,

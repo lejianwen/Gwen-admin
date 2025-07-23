@@ -21,7 +21,7 @@
       <template #default>
         <div class="default-slot">
           <slot name="default">
-            <div>
+            <div class="tips">
               <el-icon class="default-icon">
                 <plus/>
               </el-icon>
@@ -83,7 +83,7 @@
       },
       host: {
         type: String,
-        default: import.meta.env.VITE_BASE_API + '/file/upload',
+        default: import.meta.env.VITE_SERVER_API + '/file/upload',
       },
       modelValue: {
         type: Array,
@@ -220,6 +220,13 @@
     ::v-deep(.el-progress-circle) {
       width: v-bind(width) !important;
       height: v-bind(width) !important;
+    }
+
+    .tips{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
 
     .drag-tips {
